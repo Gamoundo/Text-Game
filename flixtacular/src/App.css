@@ -3,6 +3,9 @@ body {
 }
 .App {
   text-align: center;
+  width: 30rem;
+  height: 30rem;
+  background-color: crimson;
 }
 h1 {
   color: cornsilk;
@@ -14,10 +17,17 @@ a {
   color: greenyellow;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form {
+  width: 20rem;
+  background-color: beige;
+  color: palevioletred;
+  margin: 5rem;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  
 }
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
