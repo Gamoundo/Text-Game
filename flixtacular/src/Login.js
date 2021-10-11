@@ -1,23 +1,26 @@
 import React from 'react'
+import Scenes from './Scenes';
 
-function Login() {
+function Login(props) {
 
-let user;
 
+    console.log(props.prop)
     const handleSubmit = (e) => {
         e.preventDefault()
     
-         user = {
+     let user = {
             name: e.target.name.value
             
         }
         
         window.localStorage.setItem("Flixtacular", JSON.stringify(user));
+       props.changeHandler && props.changeHandler(<Scenes/>)
 
     }
 
 
     return(
+        
         <div className='form'>
             <form onSubmit={handleSubmit}>
             <div>
