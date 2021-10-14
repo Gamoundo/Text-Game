@@ -45,7 +45,7 @@ const sceneList = [
 const displayScene = (scene) => {
     return (scene.map((dialogue) => {
         return(
-            <p>{dialogue}</p>
+          user &&  <p>{dialogue}</p>
         )
     })
     )
