@@ -15,7 +15,7 @@ function Login(props) {
         }
         
         window.localStorage.setItem("Flixtacular", JSON.stringify(user));
-        props.changename(user)
+        props.changename(user.name)
        history.push('/scenes')
        
 
