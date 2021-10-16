@@ -1,11 +1,11 @@
 import React from 'react'
-import Scenes from './Scenes';
+
 import { useHistory } from "react-router-dom";
 
 function Login(props) {
 
     let history = useHistory();
-    console.log(props.prop)
+    console.log(props.uname)
     const handleSubmit = (e) => {
         e.preventDefault()
     
@@ -15,8 +15,9 @@ function Login(props) {
         }
         
         window.localStorage.setItem("Flixtacular", JSON.stringify(user));
-       props.changeHandler && props.changeHandler(<Scenes/>)
+        props.changename(user)
        history.push('/scenes')
+       
 
     }
 
@@ -36,6 +37,7 @@ function Login(props) {
                 <input type="submit" value="Register"  />
             
             </form>
+            
         </div>
     )
     
