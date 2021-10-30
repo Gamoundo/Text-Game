@@ -3,14 +3,27 @@ body {
 }
 .App {
   text-align: center;
-  width: 30rem;
-  height: 30rem;
+  width: 50rem;
+  height: 60rem;
   background-color: crimson;
 }
 h1 {
   color: cornsilk;
 
 }
+.movies {
+  text-align: left;
+  color: orange;
+  width: 10rem;
+  height: 2rem;
+}
+
+.poster {
+  background-color: palegreen;
+  width: 33rem;
+  height: 33rem;
+}
+
 
 a {
   text-decoration: none;
@@ -57,4 +70,9 @@ a {
   to {
     transform: rotate(360deg);
   }
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
 }

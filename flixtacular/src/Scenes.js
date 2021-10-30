@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Movies from './Movies'
 
 
 
@@ -65,6 +66,7 @@ const sceneList = [
    console.log(props.uname)
     return(
         <div>
+            {count === sceneList.length -1 && <Movies />}
             {props.uname && displayScene(sceneList[count])}
             
            {count !== 0 && <button onClick={countDown}> Prev </button>}
