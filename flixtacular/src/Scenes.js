@@ -1,18 +1,26 @@
 import React, { useState } from 'react'
 import Movies from './Movies'
+import { ReactComponent as S0 } from './Scene1.svg';
+import { ReactComponent as S1 } from './Scene2.svg';
+import { ReactComponent as S2 } from './Scene3.svg';
+import { ReactComponent as S3 } from './Scene4.svg';
 
 
 
 
+function Scenes(props) {
 
-
-
-
-
-
-
-
-const displayScene = (scene) => {
+  // const displayImage = (num) => {
+  //   let image = "S" + num
+  //   console.log(image)
+  //   return(
+  //     <div>
+  //       <{...image} />
+  //     </div>
+  //   )
+    
+  // }
+  const displayScene = (scene) => {
     return (scene.map((dialogue) => {
         return(
           <p>{dialogue}</p>
@@ -20,10 +28,9 @@ const displayScene = (scene) => {
     })
     )
 }
-
-function Scenes(props) {
-
+  
     const [count, setCount]=useState(0)
+    
 
 const countUp = () => {
     setCount(count+ 1)
@@ -43,7 +50,7 @@ const sceneList = [
     ],
     [
         "There didn't seem to be anything special about it at a glance.",
-        "But, when have they steered you wrong.",
+        "But, when have they steered you wrong?",
         "Although the movie list left a lot to be desired.",
           
       ],
@@ -66,6 +73,11 @@ const sceneList = [
    console.log(props.uname)
     return(
         <div>
+            {/* {props.uname && images[count]} */}
+            {count === 0 && <S0 />}
+            {count === 1 && <S1 />}
+            {count === 2 && <S2 />}
+            {/* {count === 3 && <S3 />} */}
             {count === sceneList.length -1 && <Movies />}
             {props.uname && displayScene(sceneList[count])}
             
