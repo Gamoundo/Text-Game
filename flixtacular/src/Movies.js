@@ -8,45 +8,45 @@ function Movies() {
     const movieList = [
         {
             title: "Posession",
-            art: "",
+            art: "posession art goes here",
             genre: "horror",
             reviews: []
         },
         {
             title: "Little Shop of Horrors",
-            art: "",
+            art: "LSH art",
             genre: "comedy",
             reviews: []
         },
         {
             title: "Inspector Gadget",
-            art: "",
+            art: "IG art",
             genre: "comedy",
             reviews: []
         },
         {
             title: "The Shining",
-            art: "",
+            art: "Shining art",
             genre: "horror",
             reviews: []
         },{
             title: "Train to Busan",
-            art: "",
+            art: "Train to Busan art",
             genre: "horror",
             reviews: []
         },{
             title: "It",
-            art: "",
+            art: "does this need art?",
             genre: "horror",
             reviews: []
         },{
             title: "Total Recall",
-            art: "",
+            art: "total recall art",
             genre: "action",
             reviews: []
         },{
             title: "Aladdin",
-            art: "",
+            art: "Aladdin art",
             genre: "ff",
             reviews: []
         }
@@ -55,8 +55,8 @@ function Movies() {
 const displayMovies = (arr) => {
     return (arr.map(ele => {
         return(
-            <div className="movies">
-                <p>{ele.title}</p>
+            <div className="movies" >
+                <p onMouseEnter={() => setimage(ele.art)}>{ele.title}</p>
                 
             </div>
         )
