@@ -78,7 +78,7 @@ const sceneList = [
             {count === 1 && <S1 />}
             {count === 2 && <S2 />}
             {/* {count === 3 && <S3 />} */}
-            {count === sceneList.length -1 && <Movies />}
+            {count === sceneList.length -1 && <Movies setmovie={props.setmovie}/>}
             {props.uname && displayScene(sceneList[count])}
             
            {count !== 0 && <button onClick={countDown}> Prev </button>}
