@@ -45,7 +45,7 @@ console.log(location)
     <Router>
     <div className="App">
       
-      <h1> Flixtacular</h1>
+      {location.pathname === '/' &&<h1>Flixtacular</h1>}
       {location.pathname === '/' &&<a href="/login" onClick={login}> Start </a>}
       <Route exact path= '/login'  render={ routerProps => <Login {...routerProps} changename={changename} uname={uname}/>}>
     

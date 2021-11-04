@@ -8,6 +8,13 @@ function MoviePage(props) {
         "Movies will never feel the same again."
     ]
 
+    const badReviews = [
+        "I came here for entertainment not endangerment",
+        "Get out while you can, cut your losses.",
+        "This isn't fun anymore",
+        "Those stauses don't mean anything right?"
+    ]
+
     const displayReviews = (arr) => {
         return (arr.map(ele => {
             return(

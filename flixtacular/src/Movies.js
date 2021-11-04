@@ -76,6 +76,7 @@ const history= useHistory()
     return (arr.map(ele => {
         const seeMovie = () => {
           setmovie({
+              id: ele.id,
               title: ele.title,
               art: ele.art,
               genre: ele.genre,
