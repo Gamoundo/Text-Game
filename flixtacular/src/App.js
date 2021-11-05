@@ -54,7 +54,7 @@ console.log(location)
     
     </Route>
     <Route exact path= '/movie'><MoviePage movie={movie} /> </Route>
-    
+    <Route exact path= '/movies'><Movies setmovie={setmovie} /></Route>
     </div>
     
 

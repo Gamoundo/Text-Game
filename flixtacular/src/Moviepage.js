@@ -1,7 +1,9 @@
 import React from 'react'
+import { useHistory } from 'react-router'
 
 function MoviePage(props) {
-    
+
+    const history= useHistory()
    const reviews = [
         `I felt like I was inside ${props.movie.title} a marvelous experience`,
         "How have I not known about this?",
@@ -29,6 +31,10 @@ function MoviePage(props) {
     
         )
     }
+
+    const diffMovie = () => {
+        history.push('/movies')
+    }
     
     console.log(props)    
     return(
@@ -38,6 +44,7 @@ function MoviePage(props) {
             <div className="reviews">
                 {displayReviews(reviews)}
             </div>
+            <button onClick={diffMovie}>More Movies</button>
         </div>
     )
 }
