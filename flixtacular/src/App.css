@@ -76,3 +76,14 @@ a {
   display: flex;
   flex-direction: row;
 }
+
+.review {
+  text-align: left;
+  color: black;
+  
+}
+
+.reviews {
+  background-color: blanchedalmond;
+  border-radius: 20px;
+}
