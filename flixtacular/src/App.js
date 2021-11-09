@@ -31,6 +31,10 @@ function App() {
   "Akil"
 )
 
+const [userStatus, setuserStatus] = useState(
+  []
+)
+
 console.log(setmovie)
 const changename = (name) => {
   setuname(name)

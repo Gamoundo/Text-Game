@@ -35,6 +35,19 @@ function MoviePage(props) {
     const diffMovie = () => {
         history.push('/movies')
     }
+
+    const statuses =[
+        "lost a limb",
+        "lost an eye",
+        "inflicted with bloodlust",
+        "went deaf",
+        "gained a fortune",
+        "became more charismatic",
+        "trouble magnet",
+        "one wish will be granted",
+        "Toes will get stubbed regularly for a year.",
+        "Gain a second personality"
+    ]
     
     console.log(props)    
     return(
