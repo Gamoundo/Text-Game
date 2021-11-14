@@ -11,6 +11,10 @@ h1 {
   color: cornsilk;
 
 }
+p {
+  color: orange;
+}
+
 .movies {
   text-align: left;
   color: orange;

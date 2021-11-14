@@ -49,16 +49,16 @@ console.log(location)
     <Router>
     <div className="App">
       
-      {location.pathname === '/' &&<h1>Flixtacular</h1>}
+      <h1>Flixtacular</h1>
       {location.pathname === '/' &&<a href="/login" onClick={login}> Start </a>}
       <Route exact path= '/login'  render={ routerProps => <Login {...routerProps} changename={changename} uname={uname}/>}>
     
     </Route>
-    <Route exact path= '/scenes'  render={ routerProps => <Scenes {...routerProps} uname={uname} setmovie={setmovie}/>}>
+    <Route exact path= '/scenes'  render={ routerProps => <Scenes {...routerProps} uname={uname} status={userStatus} setmovie={setmovie}/>}>
     
     </Route>
-    <Route exact path= '/movie'><MoviePage movie={movie} /> </Route>
-    <Route exact path= '/movies'><Movies setmovie={setmovie} /></Route>
+    <Route exact path= '/movie'><MoviePage movie={movie} setuserStatus={setuserStatus} /> </Route>
+    <Route exact path= '/movies'><Movies setmovie={setmovie} status={userStatus}/></Route>
     </div>
     
 

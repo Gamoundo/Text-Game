@@ -48,12 +48,26 @@ function MoviePage(props) {
         "Toes will get stubbed regularly for a year.",
         "Gain a second personality"
     ]
+
+    const addStatus = () => {
+        let newStatus;
+        newStatus = statuses[Math.floor(Math.random()*statuses.length)]
+        if (props.movie.genre === 'action' || props.movie.genre === 'horror') {
+            props.setuserStatus(prev => {
+                return {
+                    ...prev,
+                    newStatus
+                }
+            }) 
+        }
+        
+    }
     
     console.log(props)    
     return(
         <div>
-             <h1>{props.movie.title}</h1>
-            <img src={props.movie.art} alt ={props.movie.title} />
+             <h1 onClick={addStatus}>{props.movie.title}</h1>
+            <img src={props.movie.art} alt ={props.movie.title}  />
             <div className="reviews">
                 {displayReviews(reviews)}
             </div>

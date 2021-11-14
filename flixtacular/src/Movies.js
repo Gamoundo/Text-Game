@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { useHistory } from "react-router";
 
 
-function Movies  ({setmovie})  {
+function Movies  ({setmovie, status})  {
 
-
+    console.log(status)
     console.log(setmovie)
 const history= useHistory()    
     const [image, setimage] = useState("nothing yet")
@@ -98,6 +98,16 @@ const history= useHistory()
 }
 
 
+const displayStats = (arr) => {
+    return(arr.map(ele => {
+       return(
+        <p>{ele}</p>
+       )
+        
+    })
+
+    )
+}
 
     return(
         <div className="row">
@@ -109,6 +119,8 @@ const history= useHistory()
                 {image}
 
             </div>
+            {status.length === 1 && displayStats(status)}
+            {status.length === 1 && <p>Your fist status of four, what will you end up experiencing?</p>}
         </div>
     )
 }
