@@ -49,6 +49,7 @@ function MoviePage(props) {
         "Gain a second personality"
     ]
 
+    
     const addStatus = () => {
         let newStatus;
         newStatus = statuses[Math.floor(Math.random()*statuses.length)]

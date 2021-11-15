@@ -87,6 +87,7 @@ const history= useHistory()
         return(
             <div className="movies" onClick={seeMovie}>
                 <p onMouseEnter={() => setimage(ele.art)}>{ele.title}</p>
+
                 
             </div>
         )
@@ -98,29 +99,27 @@ const history= useHistory()
 }
 
 
-const displayStats = (arr) => {
-    return(arr.map(ele => {
-       return(
-        <p>{ele}</p>
-       )
-        
-    })
-
+const displayStats = (obj) => {
+    return(
+        <p>{obj.newStatus}</p>
     )
 }
 
     return(
-        <div className="row">
-            <div>
-            {displayMovies(movieList)}
+        <div >
+            <div className="row">
+                <div>
+                {displayMovies(movieList)}
+                </div>
+                
+                <div className="poster">
+                    {image}
+
+                </div>
             </div>
             
-            <div className="poster">
-                {image}
-
-            </div>
-            {status.length === 1 && displayStats(status)}
-            {status.length === 1 && <p>Your fist status of four, what will you end up experiencing?</p>}
+            {status && displayStats(status)}
+            {status.newStatus && <p>Your fist status of four, what will you end up experiencing?</p>}
         </div>
     )
 }
