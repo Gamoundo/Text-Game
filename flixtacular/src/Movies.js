@@ -99,10 +99,17 @@ const history= useHistory()
 }
 
 
-const displayStats = (obj) => {
-    return(
-        <p>{obj.stat}</p>
-    )
+const displayStats = (arr) => {
+    return (arr.map(ele => {
+        return(
+            <div className="review" >
+                <p>{ele}</p>
+                
+            </div>
+        )
+    }
+
+    ))
 }
 
     return(
@@ -118,8 +125,8 @@ const displayStats = (obj) => {
                 </div>
             </div>
             
-            {status && displayStats(status)}
-            {status.stat && <p>Your first status of four, what will you end up experiencing?</p>}
+            {status && displayStats(status.stat)}
+            {status.stat.length === 1 && <p>Your first status of four, what will you end up experiencing?</p>}
         </div>
     )
 }
