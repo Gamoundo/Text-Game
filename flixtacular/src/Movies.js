@@ -101,7 +101,7 @@ const history= useHistory()
 
 const displayStats = (obj) => {
     return(
-        <p>{obj.newStatus}</p>
+        <p>{obj.stat}</p>
     )
 }
 
@@ -119,7 +119,7 @@ const displayStats = (obj) => {
             </div>
             
             {status && displayStats(status)}
-            {status.newStatus && <p>Your fist status of four, what will you end up experiencing?</p>}
+            {status.stat && <p>Your first status of four, what will you end up experiencing?</p>}
         </div>
     )
 }

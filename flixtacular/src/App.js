@@ -31,9 +31,19 @@ function App() {
   "Akil"
 )
 
-const [userStatus, setuserStatus] = useState(
-  []
+const [userStatus, setuserStatus] = useState({
+  stat: []
+}
+  
 )
+
+const addStatus = (stats) => {
+ setuserStatus(prev => ({
+  stat: [...prev.stat, stats]
+      
+  })
+)
+}
 
 console.log(setmovie)
 const changename = (name) => {
@@ -57,7 +67,7 @@ console.log(location)
     <Route exact path= '/scenes'  render={ routerProps => <Scenes {...routerProps} uname={uname} status={userStatus} setmovie={setmovie}/>}>
     
     </Route>
-    <Route exact path= '/movie'><MoviePage movie={movie} setuserStatus={setuserStatus} /> </Route>
+    <Route exact path= '/movie'><MoviePage movie={movie} addstats={addStatus} /> </Route>
     <Route exact path= '/movies'><Movies setmovie={setmovie} status={userStatus}/></Route>
     </div>
     

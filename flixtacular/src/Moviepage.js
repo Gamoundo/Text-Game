@@ -54,12 +54,7 @@ function MoviePage(props) {
         let newStatus;
         newStatus = statuses[Math.floor(Math.random()*statuses.length)]
         if (props.movie.genre === 'action' || props.movie.genre === 'horror') {
-            props.setuserStatus(prev => {
-                return {
-                    ...prev,
-                    newStatus
-                }
-            }) 
+            props.addstats(newStatus) 
         }
         
     }
