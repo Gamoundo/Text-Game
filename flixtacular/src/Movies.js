@@ -99,6 +99,7 @@ const history= useHistory()
 }
 
 
+
 const displayStats = (arr) => {
     return (arr.map(ele => {
         return(
@@ -116,17 +117,15 @@ const displayStats = (arr) => {
         <div >
             <div className="row">
                 <div>
-                {displayMovies(movieList)}
+                {status.stat.length !== 4 && displayMovies(movieList)}
                 </div>
                 
-                <div className="poster">
-                    {image}
-
-                </div>
+                {status.stat.length !== 4 && <div className="poster">{image}</div>}
             </div>
             
             {status && displayStats(status.stat)}
             {status.stat.length === 1 && <p>Your first status of four, what will you end up experiencing?</p>}
+            {status.stat.length === 4 && <button> Your End</button>}
         </div>
     )
 }

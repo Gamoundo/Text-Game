@@ -67,7 +67,7 @@ console.log(location)
     <Route exact path= '/scenes'  render={ routerProps => <Scenes {...routerProps} uname={uname} status={userStatus} setmovie={setmovie}/>}>
     
     </Route>
-    <Route exact path= '/movie'><MoviePage movie={movie} addstats={addStatus} /> </Route>
+    <Route exact path= '/movie'><MoviePage movie={movie} addstats={addStatus} status={userStatus} /> </Route>
     <Route exact path= '/movies'><Movies setmovie={setmovie} status={userStatus}/></Route>
     </div>
     

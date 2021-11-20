@@ -46,7 +46,7 @@ function MoviePage(props) {
         "trouble magnet",
         "one wish will be granted",
         "Toes will get stubbed regularly for a year.",
-        "Gain a second personality"
+        "Gain another personality"
     ]
 
     
@@ -58,6 +58,14 @@ function MoviePage(props) {
         }
         
     }
+
+    const displayBadReviews = () => {
+        if (props.movie.genre === 'action' || props.movie.genre === 'horror') {
+            if (props.status.length >= 1) {
+                displayReviews(badReviews)
+            }
+        }
+    }
     
     console.log(props)    
     return(
@@ -68,6 +76,7 @@ function MoviePage(props) {
                 {displayReviews(reviews)}
             </div>
             <button onClick={diffMovie}>More Movies</button>
+            {displayBadReviews()}
         </div>
     )
 }
