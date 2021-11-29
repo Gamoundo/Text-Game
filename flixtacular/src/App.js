@@ -8,6 +8,7 @@ import Scenes from './Scenes';
 import { useHistory } from "react-router-dom";
 import MoviePage from './Moviepage';
 import Movies from './Movies';
+import Ending from './Endings';
 
 function App() {
 
@@ -69,6 +70,7 @@ console.log(location)
     </Route>
     <Route exact path= '/movie'><MoviePage movie={movie} addstats={addStatus} status={userStatus} /> </Route>
     <Route exact path= '/movies'><Movies setmovie={setmovie} status={userStatus}/></Route>
+    <Route exact path= '/endings'><Ending stats={userStatus}/></Route>
     </div>
     
 

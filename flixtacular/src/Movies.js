@@ -98,7 +98,9 @@ const history= useHistory()
     )
 }
 
-
+const displayEnd = () => {
+    history.push('/endings')
+}
 
 const displayStats = (arr) => {
     return (arr.map(ele => {
@@ -125,7 +127,7 @@ const displayStats = (arr) => {
             
             {status && displayStats(status.stat)}
             {status.stat.length === 1 && <p>Your first status of four, what will you end up experiencing?</p>}
-            {status.stat.length === 4 && <button> Your End</button>}
+            {status.stat.length === 4 && <button onClick={displayEnd}> Your End</button>}
         </div>
     )
 }
