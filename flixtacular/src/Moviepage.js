@@ -55,16 +55,17 @@ function MoviePage(props) {
         newStatus = statuses[Math.floor(Math.random()*statuses.length)]
         if (props.movie.genre === 'action' || props.movie.genre === 'horror') {
             props.addstats(newStatus) 
+            history.push('/movies')
         }
         
     }
 
     const displayBadReviews = () => {
-        if (props.movie.genre === 'action' || props.movie.genre === 'horror') {
-            if (props.status.length >= 1) {
+        
+            if (props.status.stat.length >= 1) {
                 displayReviews(badReviews)
             }
-        }
+        
     }
     
     console.log(props)    
@@ -76,7 +77,7 @@ function MoviePage(props) {
                 {displayReviews(reviews)}
             </div>
             <button onClick={diffMovie}>More Movies</button>
-            {displayBadReviews()}
+            { (props.movie.genre === 'action' || props.movie.genre === 'horror') && displayBadReviews()}
         </div>
     )
 }
