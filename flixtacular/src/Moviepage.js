@@ -60,13 +60,7 @@ function MoviePage(props) {
         
     }
 
-    const displayBadReviews = () => {
-        
-            if (props.status.stat.length >= 1) {
-                displayReviews(badReviews)
-            }
-        
-    }
+    
     
     console.log(props)    
     return(
@@ -77,7 +71,7 @@ function MoviePage(props) {
                 {displayReviews(reviews)}
             </div>
             <button onClick={diffMovie}>More Movies</button>
-            { (props.movie.genre === 'action' || props.movie.genre === 'horror') && displayBadReviews()}
+            { (props.movie.genre === 'action' || props.movie.genre === 'horror') && (props.status.stat.length >= 1 && displayReviews(badReviews))}
         </div>
     )
 }
