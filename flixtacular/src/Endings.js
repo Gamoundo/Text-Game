@@ -5,6 +5,11 @@ function Ending(props){
 
     console.log(props.stats)
 
+    const wishes = [
+        "negate all negative effects",
+        "triple your money gained",
+        "retain your memories"
+    ]
     
     let count = 0
     return(
